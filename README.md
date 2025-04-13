@@ -13,7 +13,7 @@ This project is a simple Spring Boot application that connects to a PostgreSQL d
 
 1. **Ensure your PostgreSQL database exists** and is running. Create a database named `nats` (or use another name and update the environment variables accordingly).
 
-2. **Navigate to the root of the Spring Boot project** (where the `pom.xml` file is located).
+2. **Navigate to the root of the Spring Boot project** (where the `docker` file is located).
 
 3. **Run the application using Docker Compose**, replacing credentials with your actual PostgreSQL username, password, and database name:
 
@@ -25,3 +25,10 @@ This project is a simple Spring Boot application that connects to a PostgreSQL d
    DB_USER=postgres \
    DB_PASSWORD=pass \
    docker-compose up --build
+
+
+Ensure Docker Compose is running, and all services (Postgres, NATS, app) are up.
+
+Publish a message to nats://localhost:4222 on the correct subject.
+
+Connect to PostgreSQL using psql, pgAdmin, or any other client: and check messages table in the rpovided table.
